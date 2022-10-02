@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Weather Journal</title>
+    <!-- load google font  -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Oswald:400,600,700|Ranga:400,700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- load fontawesome icon -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- load style sheet file -->
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div id="app" class="app">
+      <!-- app background -->
+      <div class="app-background">
+        <img src="./images/app-background.jpg" alt="" />
+      </div>
+      <!-- rectangle shap -->
+      <div id="rectangle" class="rectangle rotateY-0-deg">
+        <!-- rectangle front face -->
+        <div class="rectangle-face front-face">
+          <div class="wrapper">
+            <button type="button" class="arrow right-arrow" data-target="rectangle">
+              <i class="fa-solid fa-angles-right"></i>
+            </button>
+            <div class="headline">Weather Journal App</div>
+            <form class="" action="/">
+              <div class="holder zip">
+                <label for="zip">Enter Zipcode here</label>
+                <input
+                  id="zip"
+                  class="zip"
+                  name="zip"
+                  type="text"
+                  placeholder="Enter zip code here"
+                  required
+                />
+              </div>
+              <div class="holder feel">
+                <label for="feelings">How are you feeling today?</label>
+                <textarea
+                  class="feelings"
+                  id="feelings"
+                  name="feelings"
+                  placeholder="Enter your feelings here"
+                  rows="5"
+                  cols="36"
+                ></textarea>
+              </div>
+              <button id="generate" class="generate" type="submit">
+                Generate
+              </button>
+            </form>
+          </div>
+        </div>
+        <!-- rectangle aside face -->
+        <div class="rectangle-face aside-face">
+          <div class="wrapper">
+            <button type="button" class="arrow left-arrow" data-target="rectangle">
+              <i class="fa-solid fa-angles-left"></i>
+            </button>
+            <div class="entry">
+              <div id="title" class="title">There Is No Entry Yet</div>
+              <div id="entry-holder" class="entry-holder">
+                <span class="weather-icon empty">
+                  <i class="fa-solid fa-cloud-sun"></i>
+                </span>
+                <div id="date" class="date empty">
+                  <i class="fa-solid fa-calendar-days"></i>
+                  <span class="text-content"></span>
+                </div>
+                <div id="temp" class="temp empty">
+                  <span class="deg-icon">c<sup>o</sup></span>
+                  <span class="text-content"></span>
+                </div>
+                <div id="content" class="content empty">
+                  <span class="text-content"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- load app.js file -->
+    <script src="./app.js" type="text/javascript"></script>
+  </body>
+</html>
